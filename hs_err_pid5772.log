@@ -1,0 +1,243 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_UNCAUGHT_CXX_EXCEPTION (0xe06d7363) at pc=0x76ebc42d, pid=5772, tid=5796
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_45-b15) (build 1.8.0_45-b15)
+# Java VM: Java HotSpot(TM) Client VM (25.45-b02 mixed mode windows-x86 )
+# Problematic frame:
+# C  [KERNELBASE.dll+0xc42d]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00327400):  JavaThread "main" [_thread_in_native, id=5796, stack(0x004d0000,0x00520000)]
+
+siginfo: ExceptionCode=0xe06d7363, ExceptionInformation=0x19930520 0x0051f4fc 0x7062b12c 
+
+Registers:
+EAX=0x0051f450, EBX=0x02484ad8, ECX=0x00000003, EDX=0x00000000
+ESP=0x0051f450, EBP=0x0051f4a0, ESI=0x7062b12c, EDI=0x0051f4fc
+EIP=0x76ebc42d, EFLAGS=0x00000216
+
+Top of Stack: (sp=0x0051f450)
+0x0051f450:   e06d7363 00000001 00000000 76ebc42d
+0x0051f460:   00000003 19930520 0051f4fc 7062b12c
+0x0051f470:   72dfed63 005f0000 00000000 00000038
+0x0051f480:   00327540 0051f4fc 00000038 0051f4a8
+0x0051f490:   72dfee1f 0051f4fc 00000038 00327540
+0x0051f4a0:   0051f4e0 72e09339 e06d7363 00000001
+0x0051f4b0:   00000003 0051f4d4 02484adc 00327540
+0x0051f4c0:   e06d7363 00000001 00000000 00000000 
+
+Instructions: (pc=0x76ebc42d)
+0x76ebc40d:   02 50 ff 75 14 8d 45 c4 50 e8 57 ad 02 00 83 c4
+0x76ebc41d:   0c eb 03 89 45 c0 8d 45 b0 50 ff 15 5c 11 eb 76
+0x76ebc42d:   c9 c2 10 00 cc cc cc cc cc 8b ff 55 8b ec 56 8b
+0x76ebc43d:   75 08 83 fe f4 72 18 83 fe f6 77 13 8d 45 08 50 
+
+
+Register to memory mapping:
+
+EAX=0x0051f450 is pointing into the stack for thread: 0x00327400
+EBX=0x02484ad8 is an unknown value
+ECX=0x00000003 is an unknown value
+EDX=0x00000000 is an unknown value
+ESP=0x0051f450 is pointing into the stack for thread: 0x00327400
+EBP=0x0051f4a0 is pointing into the stack for thread: 0x00327400
+ESI=0x7062b12c is an unknown value
+EDI=0x0051f4fc is pointing into the stack for thread: 0x00327400
+
+
+Stack: [0x004d0000,0x00520000],  sp=0x0051f450,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [KERNELBASE.dll+0xc42d]
+C  [MSVCR120.dll+0x19339]
+C  [LeapJava.dll+0x1af2]
+C  [Leap.dll+0x16b5e]
+C  [LeapJava.dll+0xcd51]
+j  com.leapmotion.leap.LeapJNI.Controller_addListener(JLcom/leapmotion/leap/Controller;JLcom/leapmotion/leap/Listener;)Z+0
+j  com.leapmotion.leap.Controller.addListener(Lcom/leapmotion/leap/Listener;)Z+10
+j  LeapMouse.main([Ljava/lang/String;)V+25
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x155cb5]
+V  [jvm.dll+0x21b12e]
+V  [jvm.dll+0x155d4e]
+V  [jvm.dll+0xdac47]
+V  [jvm.dll+0xe31ef]
+C  [javaw.exe+0x229a]
+C  [javaw.exe+0xadff]
+C  [javaw.exe+0xae89]
+C  [kernel32.dll+0x1338a]
+C  [ntdll.dll+0x39882]
+C  [ntdll.dll+0x39855]
+C  0x00000000
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.leapmotion.leap.LeapJNI.Controller_addListener(JLcom/leapmotion/leap/Controller;JLcom/leapmotion/leap/Listener;)Z+0
+j  com.leapmotion.leap.Controller.addListener(Lcom/leapmotion/leap/Listener;)Z+10
+j  LeapMouse.main([Ljava/lang/String;)V+25
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x14e10400 JavaThread "AWT-Windows" daemon [_thread_in_native, id=5900, stack(0x162a0000,0x162f0000)]
+  0x14e0fc00 JavaThread "AWT-Shutdown" [_thread_blocked, id=5896, stack(0x16010000,0x16060000)]
+  0x14e0d400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=5892, stack(0x15af0000,0x15b40000)]
+  0x14cad000 JavaThread "Service Thread" daemon [_thread_blocked, id=5824, stack(0x152a0000,0x152f0000)]
+  0x14ca5c00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=5820, stack(0x15130000,0x15180000)]
+  0x14cba800 JavaThread "Attach Listener" daemon [_thread_blocked, id=5816, stack(0x00480000,0x004d0000)]
+  0x14cb9800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5812, stack(0x14ff0000,0x15040000)]
+  0x0248a000 JavaThread "Finalizer" daemon [_thread_blocked, id=5808, stack(0x14a70000,0x14ac0000)]
+  0x02487400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5804, stack(0x14be0000,0x14c30000)]
+=>0x00327400 JavaThread "main" [_thread_in_native, id=5796, stack(0x004d0000,0x00520000)]
+
+Other Threads:
+  0x02484000 VMThread [stack: 0x14e40000,0x14e90000] [id=5800]
+  0x14cae000 WatcherThread [stack: 0x15390000,0x153e0000] [id=5828]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 4928K, used 3672K [0x04600000, 0x04b50000, 0x09b50000)
+  eden space 4416K,  83% used [0x04600000, 0x04996010, 0x04a50000)
+  from space 512K,   0% used [0x04a50000, 0x04a50000, 0x04ad0000)
+  to   space 512K,   0% used [0x04ad0000, 0x04ad0000, 0x04b50000)
+ tenured generation   total 10944K, used 0K [0x09b50000, 0x0a600000, 0x14600000)
+   the space 10944K,   0% used [0x09b50000, 0x09b50000, 0x09b50200, 0x0a600000)
+ Metaspace       used 4150K, capacity 4304K, committed 4416K, reserved 4480K
+
+Card table byte_map: [0x044a0000,0x04530000] byte_map_base: 0x0447d000
+
+Polling page: 0x00120000
+
+CodeCache: size=32768Kb used=850Kb max_used=850Kb free=31917Kb
+ bounds [0x024a0000, 0x02578000, 0x044a0000]
+ total_blobs=329 nmethods=143 adapters=117
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.138 Thread 0x14ca5c00  135             java.lang.invoke.MemberName::isInvocable (7 bytes)
+Event: 0.138 Thread 0x14ca5c00 nmethod 135 0x02573748 code [0x02573840, 0x025738e0]
+Event: 0.138 Thread 0x14ca5c00  137             java.lang.Enum::ordinal (5 bytes)
+Event: 0.138 Thread 0x14ca5c00 nmethod 137 0x02573a48 code [0x02573b40, 0x02573bc0]
+Event: 0.140 Thread 0x14ca5c00  140             java.lang.AbstractStringBuilder::<init> (12 bytes)
+Event: 0.140 Thread 0x14ca5c00 nmethod 140 0x02573e08 code [0x02573f00, 0x02574010]
+Event: 0.140 Thread 0x14ca5c00  141             jdk.internal.org.objectweb.asm.ByteVector::putByte (39 bytes)
+Event: 0.140 Thread 0x14ca5c00 nmethod 141 0x02574088 code [0x02574190, 0x0257428c]
+Event: 0.141 Thread 0x14ca5c00  142             jdk.internal.org.objectweb.asm.ClassWriter::newUTF8 (70 bytes)
+Event: 0.141 Thread 0x14ca5c00 nmethod 142 0x02574388 code [0x025744d0, 0x02574698]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.021 Thread 0x00327400 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x04610898) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vﬂØ…Ωá|ï?
+Event: 0.021 Thread 0x00327400 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x04610b18) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\jni.cpp, lÕ≥“	eπ?
+Event: 0.099 Thread 0x00327400 Exception <a 'java/security/PrivilegedActionException'> (0x048188d8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.099 Thread 0x00327400 Exception <a 'java/security/PrivilegedActionException'> (0x04818a88) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.099 Thread 0x00327400 Exception <a 'java/security/PrivilegedActionException'> (0x0481b018) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.099 Thread 0x00327400 Exception <a 'java/security/PrivilegedActionException'> (0x0481b1c8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\jvm.cpp, line 1382]
+Event: 0.102 Thread 0x00327400 Exception <a 'java/io/FileNotFoundException'> (0x048227c8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 0.135 Thread 0x00327400 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x048f2330) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\methodHandles.cpp, line 1125]
+Event: 0.136 Thread 0x00327400 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x048ff868) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\prims\methodHandles.cpp, line 1125]
+Event: 0.149 Thread 0x00327400 Exception <a 'java/lang/NullPointerException'> (0x04975f00) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u45\3627\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1178]
+
+Events (10 events):
+Event: 0.148 loading class java/lang/Shutdown$Lock
+Event: 0.148 loading class java/lang/Shutdown$Lock done
+Event: 0.148 loading class java/awt/Dimension
+Event: 0.148 loading class java/awt/geom/Dimension2D
+Event: 0.148 loading class java/awt/geom/Dimension2D done
+Event: 0.148 loading class java/awt/Dimension done
+Event: 0.148 loading class com/leapmotion/leap/Vector
+Event: 0.148 loading class com/leapmotion/leap/Vector done
+Event: 0.149 loading class java/awt/Robot
+Event: 0.149 loading class java/awt/Robot done
+
+
+Dynamic libraries:
+0x000d0000 - 0x00103000 	D:\MIT-105\_Java\jdk1.8\bin\javaw.exe
+0x77590000 - 0x77710000 	C:\windows\SysWOW64\ntdll.dll
+0x76060000 - 0x76170000 	C:\windows\syswow64\kernel32.dll
+0x76eb0000 - 0x76ef7000 	C:\windows\syswow64\KERNELBASE.dll
+0x75db0000 - 0x75e51000 	C:\windows\syswow64\ADVAPI32.dll
+0x76350000 - 0x763fc000 	C:\windows\syswow64\msvcrt.dll
+0x75fe0000 - 0x75ff9000 	C:\windows\SysWOW64\sechost.dll
+0x76260000 - 0x76350000 	C:\windows\syswow64\RPCRT4.dll
+0x74ef0000 - 0x74f50000 	C:\windows\syswow64\SspiCli.dll
+0x74ee0000 - 0x74eec000 	C:\windows\syswow64\CRYPTBASE.dll
+0x765f0000 - 0x766f0000 	C:\windows\syswow64\USER32.dll
+0x75f50000 - 0x75fe0000 	C:\windows\syswow64\GDI32.dll
+0x77560000 - 0x7756a000 	C:\windows\syswow64\LPK.dll
+0x75bc0000 - 0x75c5d000 	C:\windows\syswow64\USP10.dll
+0x727c0000 - 0x7295e000 	C:\windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+0x761f0000 - 0x76247000 	C:\windows\syswow64\SHLWAPI.dll
+0x76e10000 - 0x76e70000 	C:\windows\system32\IMM32.DLL
+0x769c0000 - 0x76a8c000 	C:\windows\syswow64\MSCTF.dll
+0x62040000 - 0x620ff000 	D:\MIT-105\_Java\jdk1.8\jre\bin\msvcr100.dll
+0x61c80000 - 0x62040000 	D:\MIT-105\_Java\jdk1.8\jre\bin\client\jvm.dll
+0x70380000 - 0x70387000 	C:\windows\system32\WSOCK32.dll
+0x76dd0000 - 0x76e05000 	C:\windows\syswow64\WS2_32.dll
+0x76e70000 - 0x76e76000 	C:\windows\syswow64\NSI.dll
+0x72450000 - 0x72482000 	C:\windows\system32\WINMM.dll
+0x74e10000 - 0x74e19000 	C:\windows\system32\VERSION.dll
+0x766f0000 - 0x766f5000 	C:\windows\syswow64\PSAPI.DLL
+0x621b0000 - 0x621bc000 	D:\MIT-105\_Java\jdk1.8\jre\bin\verify.dll
+0x62180000 - 0x621a1000 	D:\MIT-105\_Java\jdk1.8\jre\bin\java.dll
+0x62160000 - 0x62173000 	D:\MIT-105\_Java\jdk1.8\jre\bin\zip.dll
+0x74f70000 - 0x75bbb000 	C:\windows\syswow64\SHELL32.dll
+0x76400000 - 0x7655c000 	C:\windows\syswow64\ole32.dll
+0x74f60000 - 0x74f6b000 	C:\windows\syswow64\profapi.dll
+0x70610000 - 0x70644000 	D:\MIT-105\_Java\workspace\LeapMotion\LeapJava.dll
+0x72ee0000 - 0x72f51000 	C:\windows\system32\MSVCP120.dll
+0x72df0000 - 0x72ede000 	C:\windows\system32\MSVCR120.dll
+0x65400000 - 0x655eb000 	D:\MIT-105\_Java\workspace\LeapMotion\Leap.dll
+0x74d80000 - 0x74da1000 	C:\windows\system32\ntmarta.dll
+0x77140000 - 0x77185000 	C:\windows\syswow64\WLDAP32.dll
+0x65690000 - 0x657d5000 	D:\MIT-105\_Java\jdk1.8\jre\bin\awt.dll
+0x75ec0000 - 0x75f4f000 	C:\windows\syswow64\OLEAUT32.dll
+0x724e0000 - 0x72560000 	C:\windows\system32\uxtheme.dll
+0x72b10000 - 0x72b23000 	C:\windows\system32\dwmapi.dll
+0x72300000 - 0x723eb000 	C:\windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Djava.library.path=D:\MIT-105\_Java\workspace\LeapMotion -Dfile.encoding=MS950 
+java_command: LeapMouse
+java_class_path (initial): D:\MIT-105\_Java\workspace\LeapMotion\bin;D:\MIT-105\_Java\workspace\LeapMotion\LeapJava.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=D:\MIT-105\_Java\workspace\LeapMotion;ion\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\MIT-105\_Java\jdk1.8\binC:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\MIT-105\_Java\jdk1.8\bin
+USERNAME=Naylor
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.19110)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8306468k(5828016k free), swap 16611100k(13953476k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.45-b02) for windows-x86 JRE (1.8.0_45-b15), built on Apr 30 2015 12:31:00 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Sep 04 17:45:41 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
